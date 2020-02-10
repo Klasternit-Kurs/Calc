@@ -40,7 +40,7 @@ namespace Calc
 			Console.WriteLine(++broj); //6
 			Console.WriteLine(broj++); //6
 			Console.WriteLine(broj);
-
+			//Izmena
 			broj = 5;
 			if (broj++ > 5)
 			{
