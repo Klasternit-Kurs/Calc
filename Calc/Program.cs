@@ -10,7 +10,7 @@ namespace Calc
 	{
 		static void Main(string[] args)
 		{
-			int x = 5;    //implicitan cast zato sto ne moze da bude problema
+			/*int x = 5;    //implicitan cast zato sto ne moze da bude problema
 			double y = x;
 
 			double x1 = 2;
@@ -57,7 +57,7 @@ namespace Calc
 			Console.WriteLine(++broj);
 			broj = 0;
 			Console.WriteLine(broj++); 
-			Console.WriteLine(broj);
+			Console.WriteLine(broj);*/
 
 
 			Console.Write("Unesite prvi broj: ");
@@ -78,6 +78,44 @@ namespace Calc
 			Console.Write("Unesite + za sabirnje, - za oduzimanje, / za deljenje ili * za mnozenje: ");
 			string operacija = Console.ReadLine();
 
+			double rezultat = 0;
+			switch(operacija)
+			{
+				case "+":
+					rezultat = broj1 + broj2;
+					break;
+				case "-":
+					rezultat = broj1 - broj2;
+					break;
+				case "*":
+					rezultat = broj1 * broj2;
+					break;
+				case "/":     
+					rezultat = broj1 / (double)broj2;
+					break;
+				case "%":
+					rezultat = broj1 % broj2;
+					break;
+				case "^":
+					rezultat = broj1;
+					
+					rezultat *= broj1;
+					
+
+					break;
+				default:
+					Console.WriteLine("Greska :(");
+					Console.ReadKey();
+					System.Environment.Exit(0);
+					break;
+			}
+			
+			Console.WriteLine(broj1 + " " + operacija + " " + broj2 + " = " + rezultat);
+			Console.WriteLine($"{broj1} {operacija} {broj2} = {rezultat}");
+			Console.WriteLine($"3 plus 4 je {3 + 4}");
+			
+			
+			/*
 			if (operacija == "+")
 			{
 				int zbir = broj1 + broj2;
@@ -99,7 +137,7 @@ namespace Calc
 			} else
 			{
 				Console.WriteLine("Nepostojeca operacija :(");
-			} 
+			} */
 
 			//Ovo je samo radi toga 
 			//da stane na kraju
